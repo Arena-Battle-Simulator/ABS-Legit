@@ -1,0 +1,62 @@
+
+//picture
+//moves 1-6
+//percent of each type: 1-8
+//name
+
+//opponent 0 : normal, dark
+0.jpg
+60 61 62 70 71 72
+0 0 0 0 0 0 0.5 0.5
+Joe
+
+//opponent 1	//50% rock, 50% fire
+1.jpg		
+0 1 2 40 41 42
+0.5 0 0 0 0.5 0 0 0
+Moe
+
+//opponent 2 water, grass, ice
+2.jpg
+10 11 20 21 50 51
+0 0.33 0.33 0 0 0.34 0 0
+Larry
+
+//opponent 3: fire, electric, normal
+3.jpg
+0 1 30 31 60 61
+0.33 0 0 0.33 0 0 0.34 0
+Gary
+
+//opponent 4: 15% electric, 60% rock, 25% dark
+4.jpg
+30 41 42 43 71 72
+0 0 0 0.15 0.6 0 0 0.25
+Hairy
+
+//opponent 5: 35% water 20% grass 15% ice 30% normal
+5.jpg
+12 13 32 52 71 72
+0 0.35 0.15 0 0 0.15 0.3 0
+Donald Trump
+
+//opponent 6: 60% fire 20% rock 20% dark
+6.jpg
+1 2 3 4 42 72
+0.6 0 0 0 0.2 0 0 0.2
+ScrubLord
+
+//opponent 7: 10% water 20%grass 30% electric 40% ice
+7.jpg
+12 22 32 52 53 54
+0 0.1 0.2 0.3 0 0.4 0 0
+Barack Obama
+
+//difficulty level 3
+
+//opponent 8: 90% rock 10% normal
+8.jpg
+42 43 44 45 46 62
+0 0 0 0 0.9 0 0.1 0
+Adam Sandler
+
