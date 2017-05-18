@@ -1,5 +1,5 @@
 /*Here I'll explain how this works.
- * Baisicly, I just have an array that stores the number of each type of item the player has.
+ * Basically, I just have an array that stores the number of each type of item the player has.
  * The number of item types can be modified through the numitems variable.
  * The getItem method has the drop rates built into it.
  * That method would need to be modified if we add more item types or change the drop rates of items.
@@ -27,7 +27,7 @@ public class ItemsClass
 		}
 	}
 
-	public int read ()
+	public boolean ItemsRead ()
 	{
 		String line;//variables that do stuff
 		int x = 0;
@@ -46,18 +46,18 @@ public class ItemsClass
 		}
 		catch (Exception e)
 		{
-			return 1;//If there is an error it returns 1
+			return false;//If there is an error it returns false
 		}
-		return 0;//If there are no errors then it returns 0
+		return true;//If there are no errors then it returns true
 	}
-	
-	public int write ()
+
+	public boolean ItemsWrite ()
 	{
 		try
 		{
 			PrintWriter output;//declaring
 			output = new PrintWriter (new FileWriter ("Items.txt"));//instantiating
-			for (int a = 0;a<numitems;a++)
+			for (int a = 0;a < numitems;a++)
 			{
 				output.println(items[a]);
 			}
@@ -65,11 +65,11 @@ public class ItemsClass
 		}
 		catch (Exception e)
 		{
-			return 1;//If there is an error it returns 1
+			return false;//If there is an error it returns false
 		}
-		return 0;//If there are no errors then it returns 0
+		return true;//If there are no errors then it returns true
 	}
-	
+
 	public int getItem ()
 	{
 		int b;
@@ -86,12 +86,20 @@ public class ItemsClass
 		}
 		return b;//This tells you what item the player got
 	}
-	
-	public void setItem(int a, int b)//a is the item number, b is the number of items
+
+	public boolean setItem(int a, int b)//a is the item number, b is the number of items
 	{
-		items[a] = b;
+		if (!(b<0))
+		{
+			items[a] = b;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	
+
 	public boolean usedItem(int a)//a is the item number
 	{
 		if (items[a] != 0)
@@ -101,10 +109,22 @@ public class ItemsClass
 		}
 		return false;//If they didn't have any of that item to use
 	}
-	
-	public int getItemCount(int a)//a is the item number
+
+	public int[] getItemCount()//a is the item number
 	{
-		return items[a];//I dont need to explain this....
+		return items;//I dont need to explain this....
+	}
+	
+	public boolean loadItem(int[] it)
+	{
+		if (it[0]<0||it[1]<0)//this is to make sure that the items loaded properly
+		{
+			return false;//returns false if there was an error
+		}
+		else
+		{
+			return true;//returns true if there were no errors
+		}
 	}
 
 }
