@@ -36,9 +36,7 @@ public class BattleScreen extends JPanel implements ActionListener {
 		ItemsClass items;
         
         //MoveCalc moveCalc=new MoveCalc();//------------------------------------------------------not connected yet
-        //ItemCalc itemCalc=new ItemCalc();//------------------------------------------------------not connected yet
-
-
+     
         public BattleScreen() {
 
                 int x=54,y=530;
@@ -251,6 +249,22 @@ public class BattleScreen extends JPanel implements ActionListener {
                 if (stop)
                 {
                         timer.stop();
+               
+                        if (newh==0 && newoph==0)//tie
+                        {
+
+
+                        }
+                        else if (newoph==0)//win
+                        {
+
+
+                        }
+                        else if (newh==0)//lose
+                        {
+
+
+                        }
                 }
                 
         }

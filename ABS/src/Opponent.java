@@ -65,8 +65,7 @@ public class Opponent {
 
 						temp=in.nextLine();
 						split=temp.split(" ");
-
-						
+					
 						
 						//percent of each type
 						for (int x=0;x<8 ;x++)
@@ -157,10 +156,6 @@ public class Opponent {
 
 		return used[index];
 	}
-
-
-
-
 
 
 }
