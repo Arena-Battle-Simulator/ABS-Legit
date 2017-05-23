@@ -5,6 +5,7 @@
 /ItemsClass.class
 /Moves.class
 /Opponent.class
+/SaveClass.class
 /SkillsGUI$1.class
 /SkillsGUI$10.class
 /SkillsGUI$11.class
@@ -32,4 +33,3 @@
 /moveSelection$2.class
 /moveSelection$3.class
 /moveSelection.class
-/SaveClass.class
