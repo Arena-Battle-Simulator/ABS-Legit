@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -39,6 +40,9 @@ public class moveSelection extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
+	
+	
 	public moveSelection() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 702, 521);
@@ -47,18 +51,18 @@ public class moveSelection extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		String fireList[] = {"Flame Tackle", "Ignite", "Deep Burn", "Incinerate", "Flare Blitz", "Flamethrower", "Burning Energy", "Fire Blast", "Blast Burn", "Incindiary Execution"};
-		String waterList[] = {"Aqua Tackle"};
-		String grassList[] = {"Leaf Tackle"};
-		String electricList[] = {"Shock Tackle"};
-		String rockList[] = {"Earthern Tackle"};
-		String iceList[] = {"Frost Tackle"};
-		String normalList[] = {"Tackle"};
-		String darkList[] = {"Dark Tackle"};
+		String fireList[] = {"", "Flame Tackle", "Ignite", "Deep Burn", "Incinerate", "Flare Blitz", "Flamethrower", "Burning Energy", "Fire Blast", "Blast Burn", "Incindiary Execution"};
+		String waterList[] = {"", "Aqua Tackle", "Soak", "Aquatic Flow", "Heavy Drizzle", "Surf", "Aqua Tail", "Waterfall", "Drench", "Drown", "Aquatic Uprise"};
+		String grassList[] = {"", "Leaf Tackle", "Synthesis", "Vinewhip", "Absorb", "Healing Scent", "Leaf Blade", "Natural Assault", "Solar Beam", "Bark Beatdown", "Gigadrain"};
+		String electricList[] = {"", "Shock Tackle", "Shock", "Electrocute", "Extreme Voltage", "Thunderbolt", "Lightning", "Thunder", "Electric Slam", "Watt Strike", "Hyper Voltage"};
+		String rockList[] = {"", "Earthern Tackle", "Earthern Tackle", "Rock Slam", "Rock Tomb", "Rollout", "Boulder Crush", "Rock Fist", "Earthern Fury", "Earthern Heart", "Earthern Annihilation", "Fossilize"};
+		String iceList[] = {"", "Frost Tackle", "Freeze", "Blizzard", "Freeze Solid", "Glacial Shroud", "Frozen Tomb", "Ice-Crystal Burst", "Fatal Freeze", "Frostbeam", "Final Frost"};
+		String normalList[] = {"", "Tackle", "Scratch", "Slam", "Belly Drum", "Heavy Beatdown", "Megapunch", "Heavy Tackle", "Balance", "Body Strength", "Slap" };
+		String darkList[] = {"", "Dark Tackle", "Leech Soul", "Crunch", "Malice", "Agony", "Torture", "Darkshroud", "Fatal Darkness", "Horrid Darkness", "Eternal Darkness"};
 		
 		
 		
-		JTextArea textArea = new JTextArea();
+		final JTextArea textArea = new JTextArea();
 		textArea.setBounds(10, 123, 214, 97);
 		contentPane.add(textArea);
 		textArea.setEditable(false);
@@ -147,11 +151,20 @@ public class moveSelection extends JFrame {
 			}
 		});
 		
+		
 		btnConfirmSelection.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				String st="Warning: Are you sure about this move?";
+				JOptionPane.showMessageDialog(null,st);
+				showMessageDialog(null, st);
 				
 			}
 		});
+	}
+
+	private void showMessageDialog(Object object, String st) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	}
