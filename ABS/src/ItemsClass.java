@@ -76,13 +76,13 @@ public class ItemsClass
 		b = (int)(10*Math.random());
 		if (b<5)
 		{
-			items[2]++;
+			items[1]++;
 			b = 1;
 		}
 		else
 		{
-			items[1]++;
-			b = 2;
+			items[0]++;
+			b = 0;
 		}
 		return b;//This tells you what item the player got
 	}
