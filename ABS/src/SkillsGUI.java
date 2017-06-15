@@ -36,6 +36,16 @@ public class SkillsGUI extends JFrame {
 	int width_7;
 	int width_8;
 	
+	static int lockedWidth1;
+	static int lockedWidth2;
+	static int lockedWidth3;
+	static int lockedWidth4;
+	static int lockedWidth5;
+	static int lockedWidth6;
+	static int lockedWidth7;
+	static int lockedWidth8;
+	
+		
 	JLabel lblLocked_1;
 	JLabel lblLocked_2;
 	JLabel lblLocked_3;
@@ -70,6 +80,17 @@ public class SkillsGUI extends JFrame {
 				}
 				
 				frame.setSize(1280,800);
+				
+				//SOMEHOW THESE VALUES NEED TO BE PASSED IN FROM THNE PLAYER INFO CLASS (replace the 100s with calls to variables)
+				//OR JUST TELL ME HOW MANY 'POINTS' THEY HAVE AND HOW MANY TOTAL THEY COULD HAVE AND I'LL CALCULATE THIS MYSELF
+				lockedWidth1 = 100;
+				lockedWidth2 = 100;
+				lockedWidth3 = 100;
+				lockedWidth4 = 100;
+				lockedWidth5 = 100;
+				lockedWidth6 = 100;
+				lockedWidth7 = 100;
+				lockedWidth8 = 100;
 			}
 		});
 	}
@@ -123,6 +144,8 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_1 = new JLabel("num1");
 		panel_8.add(lblNum_1);
 		
+		//start with all new at 0 and all - buttons disabled
+		//+ will re-enable
 		
 		final JButton button_1 = new JButton("-");
 		button_1.addActionListener(new ActionListener() {
@@ -134,6 +157,10 @@ public class SkillsGUI extends JFrame {
 				//USING REVALIDATE, WHEN WIDTH IS NEG IT STARTS EATING THE OTHER LABEL, SO EXTRA SUPER IMPORTANT TO RESTRICT WHEN YOU CAN DO PLUS/MINUS
 				lblNew_1.setVisible(true);
 				lblNew_1.revalidate();
+				if (width_1 <= 0)//disable - button
+				{
+					button_1.setEnabled(false);
+				}
 			}
 		});
 		//contentPane.repaint();
@@ -149,6 +176,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_1.setSize(lblNew_1.getPreferredSize());
 				lblNew_1.setVisible(true);
 				lblNew_1.revalidate();
+				button_1.setEnabled(true);
 			}
 		});
 		
@@ -167,7 +195,7 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_2 = new JLabel("num2");
 		panel_9.add(lblNum_2);
 		
-		JButton button_2 = new JButton("-");
+		final JButton button_2 = new JButton("-");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("minus button 2 pressed");
@@ -176,6 +204,10 @@ public class SkillsGUI extends JFrame {
 				lblNew_2.setSize(lblNew_2.getPreferredSize());
 				lblNew_2.setVisible(true);
 				lblNew_2.revalidate();
+				if (width_2 <= 0)//disable - button
+				{
+					button_2.setEnabled(false);
+				}
 			}
 		});
 		panel_9.add(button_2);
@@ -188,6 +220,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_2.setSize(lblNew_2.getPreferredSize());
 				lblNew_2.setVisible(true);
 				lblNew_2.revalidate();
+				button_2.setEnabled(true);
 			}
 		});
 		panel_9.add(buttonP_2);
@@ -201,7 +234,7 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_3 = new JLabel("num3");
 		panel_10.add(lblNum_3);
 		
-		JButton button_3 = new JButton("-");
+		final JButton button_3 = new JButton("-");
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("minus button 3 pressed");
@@ -210,6 +243,10 @@ public class SkillsGUI extends JFrame {
 				lblNew_3.setSize(lblNew_3.getPreferredSize());
 				lblNew_3.setVisible(true);
 				lblNew_3.revalidate();
+				if (width_3 <= 0)//disable - button
+				{
+					button_3.setEnabled(false);
+				}
 			}
 		});
 		panel_10.add(button_3);
@@ -222,6 +259,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_3.setSize(lblNew_3.getPreferredSize());
 				lblNew_3.setVisible(true);
 				lblNew_3.revalidate();
+				button_3.setEnabled(true);
 			}
 		});
 		panel_10.add(buttonP_3);
@@ -235,7 +273,7 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_4 = new JLabel("num4");
 		panel_11.add(lblNum_4);
 		
-		JButton button_4 = new JButton("-");
+		final JButton button_4 = new JButton("-");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("minus button 4 pressed");
@@ -244,6 +282,10 @@ public class SkillsGUI extends JFrame {
 				lblNew_4.setSize(lblNew_4.getPreferredSize());
 				lblNew_4.setVisible(true);
 				lblNew_4.revalidate();
+				if (width_4 <= 0)//disable - button
+				{
+					button_4.setEnabled(false);
+				}
 			}
 		});
 		panel_11.add(button_4);
@@ -256,6 +298,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_4.setSize(lblNew_4.getPreferredSize());
 				lblNew_4.setVisible(true);
 				lblNew_4.revalidate();
+				button_4.setEnabled(true);
 			}
 		});
 		panel_11.add(buttonP_4);
@@ -269,7 +312,7 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_5 = new JLabel("num5");
 		panel_12.add(lblNum_5);
 		
-		JButton button_5 = new JButton("-");
+		final JButton button_5 = new JButton("-");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("minus button 5 pressed");
@@ -278,6 +321,10 @@ public class SkillsGUI extends JFrame {
 				lblNew_5.setSize(lblNew_5.getPreferredSize());
 				lblNew_5.setVisible(true);
 				lblNew_5.revalidate();
+				if (width_5 <= 0)//disable - button
+				{
+					button_5.setEnabled(false);
+				}
 			}
 		});
 		panel_12.add(button_5);
@@ -290,6 +337,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_5.setSize(lblNew_5.getPreferredSize());
 				lblNew_5.setVisible(true);
 				lblNew_5.revalidate();
+				button_5.setEnabled(true);
 			}
 		});
 		panel_12.add(buttonP_5);
@@ -303,7 +351,7 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_6 = new JLabel("num6");
 		panel_13.add(lblNum_6);
 		
-		JButton button_6 = new JButton("-");
+		final JButton button_6 = new JButton("-");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("minus button 6 pressed");
@@ -312,6 +360,10 @@ public class SkillsGUI extends JFrame {
 				lblNew_6.setSize(lblNew_6.getPreferredSize());
 				lblNew_6.setVisible(true);
 				lblNew_6.revalidate();
+				if (width_6 <= 0)//disable - button
+				{
+					button_6.setEnabled(false);
+				}
 			}
 		});
 		panel_13.add(button_6);
@@ -324,6 +376,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_6.setSize(lblNew_6.getPreferredSize());
 				lblNew_6.setVisible(true);
 				lblNew_6.revalidate();
+				button_6.setEnabled(true);
 			}
 		});
 		panel_13.add(buttonP_6);
@@ -337,7 +390,7 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_7 = new JLabel("num7");
 		panel_14.add(lblNum_7);
 		
-		JButton button_7 = new JButton("-");
+		final JButton button_7 = new JButton("-");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("minus button 7 pressed");
@@ -346,6 +399,10 @@ public class SkillsGUI extends JFrame {
 				lblNew_7.setSize(lblNew_7.getPreferredSize());
 				lblNew_7.setVisible(true);
 				lblNew_7.revalidate();
+				if (width_7 <= 0)//disable - button
+				{
+					button_7.setEnabled(false);
+				}
 			}
 		});
 		panel_14.add(button_7);
@@ -358,6 +415,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_7.setSize(lblNew_7.getPreferredSize());
 				lblNew_7.setVisible(true);
 				lblNew_7.revalidate();
+				button_7.setEnabled(true);
 			}
 		});
 		panel_14.add(buttonP_7);
@@ -371,7 +429,7 @@ public class SkillsGUI extends JFrame {
 		JLabel lblNum_8 = new JLabel("num8");
 		panel_15.add(lblNum_8);
 		
-		JButton button_8 = new JButton("-");
+		final JButton button_8 = new JButton("-");
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("minus button 8 pressed");
@@ -380,6 +438,10 @@ public class SkillsGUI extends JFrame {
 				lblNew_8.setSize(lblNew_8.getPreferredSize());
 				lblNew_8.setVisible(true);
 				lblNew_8.revalidate();
+				if (width_8 <= 0)//disable - button
+				{
+					button_8.setEnabled(false);
+				}
 			}
 		});
 		panel_15.add(button_8);
@@ -392,6 +454,7 @@ public class SkillsGUI extends JFrame {
 				lblNew_8.setSize(lblNew_8.getPreferredSize());
 				lblNew_8.setVisible(true);
 				lblNew_8.revalidate();
+				button_8.setEnabled(true);
 			}
 		});
 		panel_15.add(buttonP_8);
@@ -407,7 +470,7 @@ public class SkillsGUI extends JFrame {
 		lblLocked_1.setBackground(Color.RED);
 		panel.add(lblLocked_1);
 		lblLocked_1.setOpaque(true); //<----- VERY IMPORTANT
-		lblLocked_1.setPreferredSize(new Dimension(100, 20));
+		lblLocked_1.setPreferredSize(new Dimension(lockedWidth1, 20));
 		
 		lblNew_1 = new JLabel("new");
 		lblNew_1.setBackground(Color.GREEN);
@@ -526,6 +589,35 @@ public class SkillsGUI extends JFrame {
 		lblNew_1.setVisible(false);
 		lblNew_1.revalidate();
 		
+		lblNew_2.setVisible(false);
+		lblNew_2.revalidate();
+		
+		lblNew_3.setVisible(false);
+		lblNew_3.revalidate();
+		
+		lblNew_4.setVisible(false);
+		lblNew_4.revalidate();
+		
+		lblNew_5.setVisible(false);
+		lblNew_5.revalidate();
+		
+		lblNew_6.setVisible(false);
+		lblNew_6.revalidate();
+		
+		lblNew_7.setVisible(false);
+		lblNew_7.revalidate();
+		
+		lblNew_8.setVisible(false);
+		lblNew_8.revalidate();
+		//Start out (when initial width of new is 0), with - buttons being disabled
+		button_1.setEnabled(false);
+		button_2.setEnabled(false);
+		button_3.setEnabled(false);
+		button_4.setEnabled(false);
+		button_5.setEnabled(false);
+		button_6.setEnabled(false);
+		button_7.setEnabled(false);
+		button_8.setEnabled(false);
 		
 	}
 
